@@ -1,0 +1,4 @@
+manifests
+=========
+
+Manifest management scripts
