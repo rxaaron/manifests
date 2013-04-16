@@ -12,6 +12,9 @@ body
 #banner
 {width:260px; height:100px; top:10px; left:5px; position:fixed;}
 
+#banner a img
+{outline:none; border:none;}
+
 #title
 {position:absolute; top:5px; height:45px; left:0px; width:100%; text-align:center;}
 

@@ -8,7 +8,7 @@ if (!$db) {
     $query = $db->query("SELECT ID, Name FROM Enc_Locations WHERE Active=TRUE ORDER BY Priority DESC, Name ASC;");
     if($query){
         while($result = $query->fetch_object()){
-            echo "<option value=\"".$result->ID."\" label=\"".$result->Name."\" />";
+            echo "<option value=\"".$result->ID."\" label=\"".$result->Name."\">".$result->Name."</option>";
         }
     }
 }

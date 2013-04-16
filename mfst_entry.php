@@ -3,9 +3,7 @@
         <tr>
             <td>Location:</td>
             <td>
-                <select name="location">
-                <?php include_once('scripts/locations.php'); ?>
-                </select>
+                <select name="location"><?php include_once('scripts/locations.php'); ?></select>
             </td>
         </tr>
         <tr>

@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Manifest Management</title>
-                <link rel="stylesheet" href="rsc/manifest.css" type="text/css" />
+        <link rel="stylesheet" href="rsc/manifest.css" type="text/css" />
         <link rel="shortcut icon" href="rsc/favicon.ico" />
     </head>
     <body>
