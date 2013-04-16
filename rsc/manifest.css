@@ -1,0 +1,44 @@
+/* 
+    Document   : manifest
+    Created on : Apr 16, 2013, 11:07:32 AM
+    Author     : rxaaron
+    Description: Clean interface for quick access
+*/
+
+body
+{margin:0; padding:0; color:#303030; background:#fafafa; font:76% Verdana,Tahoma,sans-serif;}
+
+/**Top of the page stuff**/
+#banner
+{width:260px; height:100px; top:10px; left:5px; position:fixed;}
+
+#title
+{position:absolute; top:5px; height:45px; left:0px; width:100%; text-align:center;}
+
+/**Menu Bar**/
+#menu
+{position:fixed; top:120px; left:0px; height:100%; width:260px; overflow:auto; background:#e0e0e0; border-right:2px solid #c0c0c0; border-top:2px solid #c0c0c0; text-align:right; border-top-right-radius:15px;}
+
+#menu p
+{margin:10px;}
+
+/**Main Area**/
+#main
+{position:absolute; top:0px; left:265px; right:265px; bottom:0px;}
+
+/**Content Area**/
+#content
+{position:absolute; top:55px; left:0px; height:auto; width:100%; overflow:auto; padding:20px;}
+
+#content table
+{border:0px;}
+
+#content input.entry
+{padding:10px 125px 10px 125px;}
+
+/**Side Bar**/
+#sidebar
+{position:fixed; top:0px; right:0px; height:100%; width:260px; overflow:auto; background:#e0e0e0; border-left:2px solid #c0c0c0;}
+
+#sidebar p
+{margin:10px;}
