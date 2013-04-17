@@ -16,7 +16,7 @@ if (!$db) {
                 echo "<tr><td>Database ID:</td><td>".$resultone->ID."<input type=\"hidden\" id=\"ID\" name=\"ID\" value=\"".$resultone->ID."\"></td></tr>";
                 echo "<tr><td>Location:</td><td>".$resultone->Location."</td></tr>";
                 echo "<tr><td>Date Sent:</td><td>".date("m/d/Y",strtotime($resultone->DateSent))."</td></tr>";
-                echo "<tr><td>Number of Pages:</td><td>".$resultone->NumPages."</td></tr>";
+                echo "<tr><td>Number of Pages:</td><td><input type=\"text\" name=\"numpages\" id=\"numpages\" value=\"".$resultone->NumPages."\"></td></tr>";
                 echo "<tr><td>Status:</td><td><select name=\"status\" id=\"status\">";
                 while($stats=$status->fetch_object()){
                     if($resultone->Status==$stats->ID){
@@ -37,7 +37,7 @@ if (!$db) {
         if($queryall){
             echo "<table class=\"list\"><colgroup><col class=\"datesent\"><col class=\"location\"><col class=\"numpages\"><col class=\"status\"><col class=\"comments\"></colgroup><tr><th>Date Sent</th><th>Location</th><th>Pages</th><th>Status</th><th>Comments</th></tr>";
             while($resultall=$queryall->fetch_object()){
-                echo "<tr><td>".$resultall->DateSent."</td><td><a href=\"index.php?ID=".$resultall->ID."\">".$resultall->Location."</a></td><td>".$resultall->NumPages."</td><td>".$resultall->Status."</td><td>".$resultall->Comments."</td></tr>";
+                echo "<tr><td>".date("m/d/Y",strtotime($resultall->DateSent))."</td><td><a href=\"index.php?ID=".$resultall->ID."\">".$resultall->Location."</a></td><td>".$resultall->NumPages."</td><td>".$resultall->Status."</td><td>".$resultall->Comments."</td></tr>";
             }
             echo "</table>";
         }
