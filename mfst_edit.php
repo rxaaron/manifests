@@ -9,7 +9,7 @@ if (!$db) {
         //specific manifest
         $queryone=$db->query("SELECT A.ID, A.DateSent, B.Name AS Location, A.NumPages, C.Name AS Status, A.Comments FROM Enc_Manifest AS A INNER JOIN Enc_Locations AS B ON A.Location=B.ID INNER JOIN Enc_MfstStatus AS C ON A.Status = C.ID WHERE ID=".$_GET['ID'].";");
         if($queryone){
-            echo "<table>";
+            
         }
         
     }else{
