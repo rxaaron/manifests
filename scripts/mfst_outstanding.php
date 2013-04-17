@@ -4,6 +4,7 @@
     if(!$db){
         echo 'ERROR: Could not connect to the database.';
     }  else {
+        echo "<a href=\"manifests/index.php\">Enter New Manifests</a>";
         $query=$db->query("SELECT DISTINCT DateSent FROM Enc_Manifest WHERE Status = 1 OR Status = 3 ORDER BY DateSent DESC;");
         if ($query){
             while($result=$query->fetch_object()){

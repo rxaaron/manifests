@@ -33,7 +33,7 @@ if (!$db) {
         
     }else{
         //general list
-        $queryall=$db->query("SELECT A.ID, A.DateSent, B.Name AS Location, A.NumPages, C.Name AS Status, A.Comments FROM Enc_Manifest AS A INNER JOIN Enc_Locations AS B ON A.Location=B.ID INNER JOIN Enc_MfstStatus AS C ON A.Status = C.ID  ORDER BY A.DateSent DESC, B.Name ASC;");
+        $queryall=$db->query("SELECT A.ID, A.DateSent, B.Name AS Location, A.NumPages, C.Name AS Status, A.Comments FROM Enc_Manifest AS A INNER JOIN Enc_Locations AS B ON A.Location=B.ID INNER JOIN Enc_MfstStatus AS C ON A.Status = C.ID  WHERE (A.Status=1 OR A.Status=2 OR A.Status=3) ORDER BY A.DateSent DESC, B.Name ASC;");
         if($queryall){
             echo "<table class=\"list\"><colgroup><col class=\"datesent\"><col class=\"location\"><col class=\"numpages\"><col class=\"status\"><col class=\"comments\"></colgroup><tr><th>Date Sent</th><th>Location</th><th>Pages</th><th>Status</th><th>Comments</th></tr>";
             while($resultall=$queryall->fetch_object()){
