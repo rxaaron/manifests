@@ -8,7 +8,7 @@ if (!$db) {
     $update=$db->query("UPDATE Enc_Manifest SET Status=".$_POST['status'].", Comments='".$_POST['comments']."' WHERE ID=".$_POST['ID'].";");
     
     if($update){
-        header("Location:/manifests/index.php?ID=".$_POST['ID']);
+        header("Location:/manifests/index.php?goto=edit");
     }
 }
 ?>

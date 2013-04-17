@@ -33,6 +33,8 @@
                 <?php 
                     if(isset($_GET['ID'])){
                         include_once 'mfst_edit.php';
+                    }elseif(isset($_GET['goto'])){
+                        include_once 'mfst_edit.php';
                     }else{
                         include_once 'mfst_entry.php';
                     }
