@@ -52,10 +52,13 @@ body
 {width:200px;}
 
 #content col.numpages
-{width:50px;}
+{width:75px;}
 
 #content col.comments
 {width:400px;}
+
+#content col.status
+{width:200px;}
 
 #content th
 {text-align:left; background-color:#585858; color:#ffffff;}
