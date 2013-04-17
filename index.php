@@ -23,8 +23,7 @@
         </div>            
         <div id="menu">
             <a href="index.php" onclick="return changepage('mfst_entry.php');">Enter Manifest</a>
-            <a href="index.php" onclick="return changepage('mfst_receive.php');">Receive Manifest</a>
-            <a href="index.php" onclick="return changepage('mfst_edit.php');">Edit Manifest</a>
+            <a href="index.php" onclick="return changepage('mfst_edit.php');">Change Manifest</a>
         </div>
         <div id="main">
             <div id="title">

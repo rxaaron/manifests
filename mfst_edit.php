@@ -13,11 +13,11 @@ if (!$db) {
             echo "<form name=\"mfst_edit\" action=\"scripts/mfst_update.php\" method=\"POST\" autocomplete=\"off\">";
             echo "<table><colgroup><col name=\"label\" style=\"width:250px;\"><col name=\"boxes\" style=\"width:300px;\"></colgroup>";
             while($resultone=$queryone->fetch_object()){
-                echo "<tr><td>Database ID:</td><td>".$resultone->ID."</td></tr>";
+                echo "<tr><td>Database ID:</td><td>".$resultone->ID."<input type=\"hidden\" id=\"ID\" name=\"ID\" value=\"".$resultone->ID."\"></td></tr>";
                 echo "<tr><td>Location:</td><td>".$resultone->Location."</td></tr>";
                 echo "<tr><td>Date Sent:</td><td>".date("m/d/Y",strtotime($resultone->DateSent))."</td></tr>";
                 echo "<tr><td>Number of Pages:</td><td>".$resultone->NumPages."</td></tr>";
-                echo "<tr><td>Status:</td><td><select id=\"status\">";
+                echo "<tr><td>Status:</td><td><select name=\"status\" id=\"status\">";
                 while($stats=$status->fetch_object()){
                     if($resultone->Status==$stats->ID){
                         echo "<option value=\"".$stats->ID."\" label=\"".$stats->Name."\" selected>".$stats->Name."</option>";
@@ -26,7 +26,7 @@ if (!$db) {
                     }
                 }
                 echo "</select></td></tr>";
-                echo "<tr><td>Comments:</td><td><textarea id=\"comments\" rows=10 columns=30>".$resultone->Comments."</textarea></td></tr></table>";
+                echo "<tr><td>Comments:</td><td><textarea name=\"comments\" id=\"comments\" rows=10 columns=30>".$resultone->Comments."</textarea></td></tr></table>";
                 echo "<input type=\"submit\" id=\"gobtn\" value=\"Update Manifest\" style=\"padding:10px 40px 10px 40px;\" /></form>";
             }
         }
