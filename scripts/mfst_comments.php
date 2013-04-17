@@ -8,7 +8,7 @@ if (!$db) {
     $query=$db->query("SELECT Comments FROM Enc_Manifest WHERE ID=".$_POST['ID'].";");
     if ($query){
         while($result=$query->fetch_object()){
-            echo $result->Comments."<br /><br /><a href=\"index.php\" onclick=\"return clearbox('comm".$_POST['ID']."')\">Hide Comments</a>";
+            echo $result->Comments;
         }
     }
 }

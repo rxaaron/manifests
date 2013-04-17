@@ -11,9 +11,9 @@
                 if ($subquery){
                     echo "<h1>".date("m/d/Y",strtotime($result->DateSent))."</h1>";
                     while($subresult=$subquery->fetch_object()){
-                        echo "<div id=\"mfst".$subresult->ID."\" class=\"manifests\"><h2><a href=\"manifests/mfst_edit.php?ID=".$subresult->ID."\">".$subresult->Name."</a></h2>Number of Pages: ".$subresult->NumPages;
+                        echo "<div id=\"mfst".$subresult->ID."\" class=\"manifests\"><h2><a href=\"manifests/index.php?ID=".$subresult->ID."\">".$subresult->Name."</a></h2>Number of Pages: ".$subresult->NumPages;
                         if($subresult->Comments != Null){
-                            echo "<p><a href=\"index.php\" onclick=\"return expandbox(".$subresult->ID.");\">Show Comments</a></p><div id=\"comm".$subresult->ID."\" class=\"comments\"></div>";
+                            echo "<p><a href=\"index.php\" id=\"a".$subresult->ID."\" onclick=\"return expandbox(".$subresult->ID.");\">Show Comments</a></p><div id=\"comm".$subresult->ID."\" class=\"comments\"></div>";
                         }
                         echo "</div>";
                     }

@@ -31,7 +31,13 @@
                 <h1>Manifest Management</h1>
             </div>
             <div id="content">
-                <?php include_once 'mfst_entry.php'; ?>
+                <?php 
+                    if(isset($_GET['ID'])){
+                        include_once 'mfst_edit.php';
+                    }else{
+                        include_once 'mfst_entry.php';
+                    }
+                ?>
             </div>
         </div>            
         <div id="sidebar">
