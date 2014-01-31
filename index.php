@@ -42,6 +42,8 @@
             </div>
         </div>            
         <div id="sidebar">
-        &nbsp;</div>
+            <h1>Outstanding<br>Manifests</h1>
+            <?php include_once('scripts/mfst_outstanding.php'); ?>
+        </div>
     </body>
 </html>
